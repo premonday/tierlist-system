@@ -1,6 +1,7 @@
 {
     "name": "premonday/tierlist",
     "description": "Global functions, front and back-end.",
+    "version": "1.0.0",
     "type": "project",
     "authors": [
         {
@@ -11,7 +12,7 @@
     "minimum-stability": "dev",
     "require": {},
     "autoload": {
-        "psr-0": {
+        "psr-4": {
             "Premonday\\Tierlist\\": "src"
         }
     },
