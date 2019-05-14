@@ -1,5 +1,5 @@
 {
-    "name": "tierlist/system",
+    "name": "premonday/tierlist",
     "description": "Global functions, front and back-end.",
     "type": "project",
     "authors": [
@@ -9,5 +9,10 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Tierlist\\": "src"
+        }
+    }
 }

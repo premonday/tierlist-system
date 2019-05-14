@@ -1,6 +1,6 @@
 <?php
 
-namespace Tierlist\System;
+namespace Premonday\Tierlist;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;

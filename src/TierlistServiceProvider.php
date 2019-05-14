@@ -1,6 +1,6 @@
 <?php
 
-namespace Tierlist\System;
+namespace Premonday\Tierlist;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -14,7 +14,7 @@ class TierlistServiceProvider extends ServiceProvider
     public function register()
     {
         //
-        $this->app->make('Tierlist\System\ArticlesController');
+        $this->app->make('Premonday\Tierlist\ArticlesController');
         $this->loadViewsFrom(__DIR__.'/views', 'tierlist');
     }
 
