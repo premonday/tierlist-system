@@ -14,5 +14,12 @@
         "psr-0": {
             "Premonday\\Tierlist\\": "src"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Premonday\\Tierlist\\TierlistServiceProvider"
+            ]
+        }
     }
 }
