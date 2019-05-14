@@ -1,0 +1,13 @@
+{
+    "name": "tierlist/system",
+    "description": "Global functions, front and back-end.",
+    "type": "project",
+    "authors": [
+        {
+            "name": "RJS",
+            "email": "premonday@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
