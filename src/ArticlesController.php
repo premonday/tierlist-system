@@ -5,6 +5,7 @@ namespace Premonday\Tierlist;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Str;
 
 class ArticlesController extends Controller
 {
@@ -14,7 +15,7 @@ class ArticlesController extends Controller
         $allposts = json_decode(file_get_contents(self::API_NEWS. env('API_NEWS_CATEGORY')), true);
         $posts = array();
         foreach($allposts as $post) {
-            $post['tierlist_excerpt'] = \Str::words(strip_tags($post['excerpt']['rendered']), '22');
+            $post['tierlist_excerpt'] = Str::words(strip_tags($post['excerpt']['rendered']), '22');
             array_push($posts, $post);
         }
 
