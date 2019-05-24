@@ -11,7 +11,13 @@ class ArticlesController extends Controller
     const API_NEWS = 'https://news.tierlist.gg/wp-json/wp/v2/posts?categories=';
 
     public function index() {
-        $posts = json_decode(file_get_contents(self::API_NEWS. env('API_NEWS_CATEGORY')), true);
+        $allposts = json_decode(file_get_contents(self::API_NEWS. env('API_NEWS_CATEGORY')), true);
+        $posts = array();
+        foreach($allposts as $post) {
+            $post['tierlist_excerpt'] = \Str::words(strip_tags($post['excerpt']['rendered']), '22');
+            array_push($posts, $post);
+        }
+
         return view('g.news.index', compact('posts'));
 
     }
